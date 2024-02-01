@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Blogger: {{ blogger }}</h1>
+
+    <h3>Bio</h3>
+    <p>{{blogger.bio}}</p>
+
+    {% if blogpost_list %}
+        <h3>Blog list</h3>
+        <ul>
+            {% for blog in blogpost_list %}
+                <li><a href="{{ blog.get_absolute_url }}">{{ blog.name }}</a>{{blog.post_date}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>This blogger hasn't posted anything yet.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+    <title>Home page</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Blog Site</h1>
+    <p>A blog site developed by <em>Dzombo Allan</em>!</p>
+
+    <h2>UML Models</h2>
+    <p>An UML diagram of the site's Django model structure is shown below.</p>
+
+    <div>
+        {% load static %}
+        <img src="{% static 'images/diy_django_mini_blog_models.png' %}" alt="My image" style="width: 555px;height: 540px;">
+    </div>
+{% endblock %}
